@@ -157,6 +157,8 @@ boolean check = false;
             @Override
             public void onClick(View v) {
 
+
+
                 checkVisit = false;
                 LatLng latLng = new LatLng( latnew, longnew );
 
