@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:id="@+id/searchLayout"
+        >
+
+        <fragment android:id="@+id/autocomplete_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map"></fragment>
+
+        <Button
+            android:id="@+id/nearbyMainMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="NearBy Search"
+            android:textColor="@android:color/background_light"
+
+            ></Button>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:layout_margin="20dp"
+            >
+
+        <Button
+            android:visibility="visible"
+    android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:text="Add to Favourite"
+            android:padding="10dp"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/buttonAddFavourite"></Button>
+
+        <Button
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:text="Visit Place"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/buttonVisitPlace"></Button>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>
+
+
+</RelativeLayout>

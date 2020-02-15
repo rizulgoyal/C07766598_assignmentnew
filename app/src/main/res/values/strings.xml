@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Favourite Place App</string>
+
+    <string name="api_key">AIzaSyCGNZIaTG3Lj3gj5I6OrIvf9NZMQbz2oeU</string>
+    <string name="api_key_class">AIzaSyD2ktEXAQnHpIkh5TqnJgqEaXwcs1olsmY</string>
+    <string name="please_select_one_option_to_proceed">Please select one option to proceed</string>
+    <string name="get_direction">Get Direction</string>
+    <string name="please_click_on_window_to_add_favourite">Please click on window to add favourite</string>
+    <array name="array_nearby_places">
+    <item>cafe</item>
+    <item>restaurant</item>
+    <item>museum</item>
+</array>
+    <array name="array_maptypes">
+        <item>Normal</item>
+        <item>Hybrid</item>
+        <item>Terrain</item>
+        <item>Satellite</item>
+
+    </array>
+
+</resources>

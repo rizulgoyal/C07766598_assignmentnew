@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    >
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:textAlignment="gravity"
+        >
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Source"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/background_light"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            ></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/searchLayout"
+        >
+        <fragment android:id="@+id/autocomplete_fragment1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:textAlignment="gravity"
+        >
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/background_light"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            ></TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:id="@+id/searchLayout1"
+
+            >
+            <fragment android:id="@+id/autocomplete_fragment2"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:visibility="gone"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layoutToHideNavigation"
+        >
+        <TextView
+            android:padding="10dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/distance_text_navigation"
+            android:textColor="@android:color/background_light"
+            android:text="Distance"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"></TextView>
+
+        <TextView
+            android:padding="10dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/duration_text_navigation"
+            android:textColor="@android:color/background_light"
+            android:text="Duration"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"></TextView>
+
+        //  new layout for clear button
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_clear_map"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:cardElevation="@dimen/cardview_default_radius"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/layout_clear_direction"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@android:color/background_light"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Close"
+                    android:textColor="@color/colorPrimary"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    ></TextView>
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageClear"
+                    android:src="@drawable/ic_action_clear_map"
+                    ></ImageView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+    // new layout for button
+
+    <androidx.cardview.widget.CardView
+        android:visibility="visible"
+    android:id="@+id/card_direction"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    app:cardElevation="@dimen/cardview_default_radius"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layout_get_direction"
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@android:color/background_light"
+        >
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAlignment="center"
+    android:text="@string/get_direction"
+    android:textColor="@color/colorPrimary"
+    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+    ></TextView>
+
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageDirection"
+        android:src="@drawable/ic_action_direction"
+        ></ImageView>
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+
+
+
+    <fragment
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/mapDirection">
+
+
+
+
+    </fragment>
+
+
+</LinearLayout>
+
+</RelativeLayout>
